@@ -1,4 +1,5 @@
 -- Wrapper for linters and formatters that allows them to be treated as language servers by neovim
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
