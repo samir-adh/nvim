@@ -13,6 +13,7 @@ return {
           "lua_ls",
           "tsserver",
           "rust_analyzer",
+          "clangd",
         },
         automatic_installation = true,
       })
@@ -30,6 +31,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.clangd.setup({
         capabilities = capabilities,
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
