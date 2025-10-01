@@ -1,13 +1,15 @@
--- Plugin that generate abstract syntax trees that can then be passed to lsps for linting formatting etc
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- Customize Treesitter
+
+---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function()
-    local config = require("nvim-treesitter.configs")
-    config.setup({
-      auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
-    })
-  end
+  opts = {
+    ensure_installed = {
+      "lua",
+      "vim",
+      -- add more arguments for adding more treesitter parsers
+    },
+  },
 }
