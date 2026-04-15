@@ -10,17 +10,27 @@ return {
     'loctvl842/monokai-pro.nvim',
     lazy = false,
     priority = 1000,
-    config = function()
-      require('monokai-pro').setup()
-      -- vim.cmd.colorscheme 'monokai-pro'
-    end,
+    config = function() require('monokai-pro').setup() end,
   },
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
+    config = function() require('gruvbox').setup() end,
+  },
+  {
+    'Shatur/neovim-ayu',
+    lazy = false,
+    priority = 1000,
     config = function()
-      require('gruvbox').setup()
-      vim.cmd.colorscheme 'gruvbox'
+      vim.opt.termguicolors = true
+      require('ayu').setup {
+        -- Optional: Override default settings here
+        mirage = true, -- Set to true for mirage variant
+        overrides = {
+          -- Custom highlight groups can be added here
+        },
+      }
+      vim.cmd.colorscheme 'ayu' -- Set the colorscheme
     end,
   },
 }
