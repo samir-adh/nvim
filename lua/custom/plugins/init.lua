@@ -30,7 +30,33 @@ return {
           -- Custom highlight groups can be added here
         },
       }
-      vim.cmd.colorscheme 'ayu' -- Set the colorscheme
+      vim.cmd.colorscheme 'gruvbox' -- Set the colorscheme
+    end,
+  },
+  {
+    'akinsho/bufferline.nvim',
+    version = 'v4.*',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      vim.opt.termguicolors = true
+      require('bufferline').setup {
+        options = {
+          mode = 'tabs',
+          separator_style = { '', '' }, -- No separators for clean look
+          indicator = { style = 'none' },
+          tab_size = 20,
+          maximum_length = 30,
+          truncate_names = true,
+          diagnostics = 'nvim_lsp',
+          offsets = {
+            { filetype = 'NvimTree', text = '📁 Explorer' },
+          },
+          highlights = {
+            tab_selected = { fg = '#1a1b26', bg = '#74b1ff', bold = true },
+            tab = { fg = '#6c7086', bg = '#1a1b26' },
+          },
+        },
+      }
     end,
   },
 }
