@@ -219,12 +219,18 @@ vim.keymap.set('n', '<C-w>j', '<C-w>J', { desc = 'Move window to the lower' })
 vim.keymap.set('n', '<C-w>k', '<C-w>K', { desc = 'Move window to the upper' })
 
 -- Tab navigation keymaps
-vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>', { desc = '[O]pen new tab' })
-vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>', { desc = '[C]lose tab' })
-vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>', { desc = 'Next tab' })
-vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
-vim.keymap.set('n', '<leader>tf', '<cmd>tabfirst<CR>', { desc = 'First tab' })
-vim.keymap.set('n', '<leader>tl', '<cmd>tablast<CR>', { desc = 'Last tab' })
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<CR>', { desc = '[T]ab [N]ew' })
+vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>', { desc = '[T]ab [C]lose' })
+vim.keymap.set('n', '<leader>to', '<cmd>tabonly<CR>', { desc = '[T]ab [O]nly' })
+vim.keymap.set('n', '<leader>tl', '<cmd>BufferLineCycleNext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>th', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Previous tab' })
+
+-- vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>', { desc = '[O]pen new tab' })
+-- vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>', { desc = '[C]lose tab' })
+-- vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>', { desc = 'Next tab' })
+-- vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
+-- vim.keymap.set('n', '<leader>tf', '<cmd>tabfirst<CR>', { desc = 'First tab' })
+-- vim.keymap.set('n', '<leader>tl', '<cmd>tablast<CR>', { desc = 'Last tab' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

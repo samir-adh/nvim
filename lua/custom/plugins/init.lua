@@ -41,7 +41,7 @@ return {
       vim.opt.termguicolors = true
       require('bufferline').setup {
         options = {
-          mode = 'tabs',
+          -- mode = 'tabs',
           separator_style = { '', '' }, -- No separators for clean look
           indicator = { style = 'none' },
           tab_size = 20,
