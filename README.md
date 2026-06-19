@@ -343,6 +343,7 @@ asdf reshim neovim
 </details>
 
 </details>
+
 ### Customizing the config
 
 #### To-do list
