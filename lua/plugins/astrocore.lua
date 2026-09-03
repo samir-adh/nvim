@@ -10,6 +10,15 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
+    -- Treesitter parsers to always keep installed (AstroNvim v6+ configures
+    -- these here rather than in the `nvim-treesitter` spec)
+    treesitter = {
+      ensure_installed = {
+        "lua",
+        "vim",
+        -- add more arguments for adding more treesitter parsers
+      },
+    },
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
